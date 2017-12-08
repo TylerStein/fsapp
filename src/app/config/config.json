@@ -1,0 +1,10 @@
+{
+  "default":{
+    "api_ws_domain":"ws://192.168.0.23:3000",
+    "api_port":"3000",
+    "fs_ws_domain":"ws://192.168.0.23:5066",
+    "fs_domain":"192.168.0.23",
+    "fs_password":"1234",
+    "fs_port":"5066"
+  }
+}

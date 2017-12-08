@@ -1,0 +1,36 @@
+@import "../../../assets/scss/_colors";
+@import "../../../assets/scss/_mixins";
+
+.phone-border {
+  @include border-radius(4px);
+  border-color: $secondary-light;
+  border-style: solid;
+}
+
+.message-box {
+  overflow-y:scroll;
+  max-height: 10em;
+}
+
+.video {
+  @extend .phone-border;
+  max-width: 75%;
+  max-height: 75%;
+  min-width: 25%;
+  min-height: 25%;
+}
+
+.video-local {
+  background-color: hsl(0,0%,50%);
+}
+
+.video-remote {
+  background-color: hsl(0,0%,40%);
+}
+
+.message-list{
+  li{
+    list-style: none;
+    margin-left: 0;
+  }
+}

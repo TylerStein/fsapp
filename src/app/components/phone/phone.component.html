@@ -1,0 +1,52 @@
+<div class="ml-2 mr-2 mt-2">
+<div class="row mb-2">
+  <div class="col-1">
+    <label for="dest_user" class="m-0 p-0 lead float-right align-middle">Recipent: </label>
+  </div>
+  <div class="col-11">
+    <!-- Header -->
+    <input type="text" id="dest_user" #outuser class="m-0 p-0 w-100 h-100">
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col-6">
+    <!-- Local Video -->
+    <video #videolocal class="video-local float-right border border-light"></video>
+    <audio #audiolocal></audio>
+  </div>
+  <div class="col-6">
+    <!-- Remote Video -->'
+    <video #videoremote class="video-remote float-left border border-light"></video>
+    <audio #audioremote></audio>
+  </div>
+</div>
+<div class="row mb-2">
+      <!-- Setting Buttons -->
+  <div class="col-6">
+    <button class="btn btn-primary w-100 float-right">Audio Call</button>
+  </div>
+  <div class="col-6">
+    <button class="btn btn-primary w-100 float-left">Video Call</button>
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col-12">
+    <!-- Chat Box -->
+    <div class="w-100 border border-light rounded message-box">
+      <ul class="message-list mt-3">
+        <li *ngFor="let message of messageLog">
+          {{message}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-9">
+      <input type="text" id="txt_outmessage" #outmessage class="w-100 h-100">
+    </div>
+    <div class="col-3">
+      <button class="btn btn-primary w-100 h-100" id="btn_send" (click)="OnClickSend(outuser.value, outmessage.value)">Send</button>
+    </div>
+  </div>
+</div>

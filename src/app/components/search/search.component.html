@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <form class="form-inline">
+    <label for="searchTerm" class="mr-2">Search</label>
+    <input type="text" class="form-control mr-2" #searchTerm>
+    <label for="searchBy" class="mr-2">By</label>
+    <select class="form-control mr-2" #searchSelect>
+      <option *ngFor="let type of searchTypes">{{type}}</option>
+    </select>
+    <button type="submit" class="btn btn-primary" (click)="onSubmitSearch(searchSelect.value, searchTerm.value)">Search</button>
+  </form>
+</div>
+<div class="container mt-4">
+  <h3 *ngIf="!hasData">Search results will appear here</h3>
+  <div *ngIf="hasData">
+    <div class="card" *ngFor="let user of searchResult">
+      <div class="card-header">
+        <h3><strong>Name:</strong> {{user.name}}</h3>
+      </div>
+      <div class="card-body">
+        <strong>ID:</strong> {{user.id}} <br/>
+        <strong>Email:</strong> {{user.email}}
+      </div>
+    </div>
+  </div>
+</div>

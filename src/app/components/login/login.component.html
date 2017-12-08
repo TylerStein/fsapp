@@ -1,0 +1,14 @@
+<div class="container mt-4">
+<h2 class="page-header">Login</h2>
+<form (submit)="onLoginSubmit()">
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" [(ngModel)]="user.email" name="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" [(ngModel)]="user.password" name="password" class="form-control">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+</div>

@@ -1,0 +1,14 @@
+<div class="container mt-4 ">
+  <h2>Welcome to your Dashboard</h2>
+  <div class="card mt-4">
+    <div class="card-header"><h4 class="mb-0">User Details</h4></div>
+    <div class="card-body pb-0">
+      <p>id: {{user.id}}</p>
+      <p>Name: {{user.name}}</p>
+      <p>Email: {{user.email}}</p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-danger w-100" (click)="onDeleteAccount()">Delete Account</button>
+    </div>
+  </div>
+</div>

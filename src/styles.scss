@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/colors";
+@import "assets/scss/fonts";
+@import "assets/scss/mixins";
+
+body {
+  color: $secondary-light;
+  background: $primary-dark;
+  font-family: $font-body;  
+}
+
+p {
+  font-family: $font-body;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-head;
+}
+
+a, a:link, a:visited {
+  color: $secondary-light;
+  @include transition(color 0.16s);
+}
+
+a:hover, a:active {
+  color: $accent;
+  text-decoration: none;
+}

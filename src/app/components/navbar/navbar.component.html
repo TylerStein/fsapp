@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark nav-shadow">
+  <a class="navbar-brand" href="#">FSApp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto navbar-left">
+      <li class="nav-item" >
+        <a class="nav-link"[routerLink]="['/']">Home</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav  navbar-right">
+      <li class="nav-item" *ngIf="authService.isUserLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/phone']">Phone</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.isUserLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/search']">Search</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.isUserLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.isUserLoggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" (click)="logOutUser()" [routerLink]="['/login']">Logout</a>
+      </li>
+      <li class="nav-item" *ngIf="!authService.isUserLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="!authService.isUserLoggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/register']">Register</a>
+      </li>
+    </ul>
+  </div>
+</nav>
